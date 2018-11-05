@@ -45,9 +45,8 @@
       <ProgressIndicator fx:id="indicator" layoutX="513.0" layoutY="23.0" prefHeight="77.0" prefWidth="99.0" visible="false" />
       <ImageView fx:id="albumImageView" fitHeight="256.0" fitWidth="256.0" layoutX="14.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" />
       <TextField fx:id="textFieldSearchBar" layoutX="306.0" layoutY="117.0" onAction="#handleSearchBar" prefHeight="25.0" prefWidth="281.0" promptText="Search for artist..." />
-      <Button fx:id="buttonNext" layoutX="587.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleButtonNext" prefHeight="25.0" prefWidth="32.0" text="&gt;" />
-      <Button fx:id="buttonPrev" layoutX="277.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleButtonPrev" prefHeight="25.0" prefWidth="32.0" text="&lt;" />
-      <Button fx:id="buttonPlay" layoutX="14.0" layoutY="387.0" mnemonicParsing="false" text="Play" />
+      <Button fx:id="buttonNext" disable="true" layoutX="587.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleButtonNext" prefHeight="25.0" prefWidth="32.0" text="&gt;" />
+      <Button fx:id="buttonPrev" disable="true" layoutX="277.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleButtonPrev" prefHeight="25.0" prefWidth="32.0" text="&lt;" />
       <Label fx:id="labelDenominator" layoutX="584.0" layoutY="391.0" text="/0:30" />
       <Label fx:id="labelSongTime" alignment="CENTER_RIGHT" layoutX="556.0" layoutY="391.0" textAlignment="RIGHT" />
     </children>

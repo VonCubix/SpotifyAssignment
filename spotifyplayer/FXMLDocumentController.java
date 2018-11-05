@@ -63,6 +63,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     Button buttonPrev;
     
+    
     @FXML
     Button buttonNext;
     
@@ -87,6 +88,8 @@ public class FXMLDocumentController implements Initializable {
     
     ArrayList<Album> albums = null;
     int currentAlbumIndex = 0;
+    
+    
 
     
     @FXML
@@ -293,6 +296,8 @@ public class FXMLDocumentController implements Initializable {
         trackTitleColumn.setCellValueFactory(new PropertyValueFactory("trackTitle"));
         trackTitleColumn.setPrefWidth(250);
         
+         
+        
         TableColumn playColumn = new TableColumn("Preview");
         playColumn.setCellValueFactory(new PropertyValueFactory("trackPreviewUrl"));
         Callback<TableColumn<TrackForTableView, String>, TableCell<TrackForTableView, String>> cellFactory = new Callback<TableColumn<TrackForTableView, String>, TableCell<TrackForTableView, String>>(){
@@ -332,12 +337,19 @@ public class FXMLDocumentController implements Initializable {
                 if(newValue == null){
                     return;                            
                 }
+                
+                int value = (int)newValue.doubleValue();
+                
+                if(value < 10)
+                {
+                    labelSongTime.setText("0:0" + value + "");                    
+                }
+                else
+                
+                    labelSongTime.setText("0:" + value + "");
+                }
 
-                labelSongTime.setText("0:" + (int)newValue.doubleValue()/1 + "");
-
-            }
-
-        });
+            });
 
         
         
@@ -351,10 +363,10 @@ public class FXMLDocumentController implements Initializable {
                 }
             }
         });
-       /* 
+        
         // Initialize GUI
         searchAlbumsFromArtist("pink floyd");
-        displayAlbum(0);*/
+        displayAlbum(0);
        
         
     }        
